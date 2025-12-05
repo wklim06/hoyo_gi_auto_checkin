@@ -14,3 +14,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<!--
+1. Who are you?
+2. What are you currently working on?
+3. What tools do you use?
+4. How to reach you?
+-->
