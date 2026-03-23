@@ -20,7 +20,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: python -m pip install --upgrade pip requests schedule
 
       - name: Run check-in
         env:
