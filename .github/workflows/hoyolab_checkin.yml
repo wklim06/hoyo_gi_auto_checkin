@@ -1,0 +1,30 @@
+name: HoYoLAB Genshin Daily Check-In
+
+on:
+  schedule:
+    # 22:00 UTC = 06:00 MYT (UTC+8) every day
+    - cron: "0 22 * * *"
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run check-in
+        env:
+          LTUID_V2:         ${{ secrets.LTUID_V2 }}
+          LTOKEN_V2:        ${{ secrets.LTOKEN_V2 }}
+          DISCORD_WEBHOOK:  ${{ secrets.DISCORD_WEBHOOK }}   # optional
+        run: python hoyolab_checkin.py --once
