@@ -54,6 +54,7 @@ CHECKIN_URL    = "https://sg-hk4e-api.hoyolab.com/event/sol/sign"
 REWARD_URL     = "https://sg-hk4e-api.hoyolab.com/event/sol/home"
 INFO_URL       = "https://sg-hk4e-api.hoyolab.com/event/sol/info"
 ACT_ID         = "e202102251931481"
+LANG           = "zh-cn"
 
 HEADERS = {
     "User-Agent":   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -81,7 +82,7 @@ def get_checkin_info(cookie: str) -> dict | None:
     try:
         resp = requests.get(
             INFO_URL,
-            params={"act_id": ACT_ID},
+            params={"act_id": ACT_ID, "land": LANG},
             headers={**HEADERS, "Cookie": cookie},
             timeout=15,
         )
@@ -124,6 +125,7 @@ def checkin(cookie: str) -> tuple[bool, str]:
     try:
         resp = requests.post(
             CHECKIN_URL,
+            params={"lang": LANG},
             json={"act_id": ACT_ID},
             headers={**HEADERS, "Cookie": cookie},
             timeout=15,
@@ -134,9 +136,9 @@ def checkin(cookie: str) -> tuple[bool, str]:
         msg  = data.get("message", "")
 
         if code == 0:
-            return True, "Check-in successful! ✅"
+            return True, "Check-in successful!"
         elif code == -5003:
-            return True, "Already checked in today. ✅"
+            return True, "Already checked in today."
         else:
             return False, f"Check-in failed (code {code}): {msg}"
 
