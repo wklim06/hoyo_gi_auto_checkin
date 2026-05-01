@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+This is my personal script for Hoyolab Daily Check-In automation, for Genshin Impact section.
+
 <!--
 **sphezonia06/sphezonia06** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
