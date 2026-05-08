@@ -194,12 +194,14 @@ def run_checkin():
         log.info(f"📅 Total check-in days so far: {total_days}")
         if info.get("is_sign"):
             log.info("ℹ️  Already signed in today — skipping API call.")
+            '''
             send_discord_notification(
                 CONFIG["discord_webhook"],
                 "🌸 Genshin Daily Check-In",
                 "Already checked in today!",
                 success=True,
             )
+            '''
             return
 
     # Fetch today's reward
