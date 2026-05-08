@@ -216,12 +216,14 @@ def run_checkin():
         log.error(f"❌ {message}")
 
     # Discord notification
+    '''
     send_discord_notification(
         CONFIG["discord_webhook"],
         "🌸 Genshin Daily Check-In",
         f"{message}\n🎁 Reward: **{reward}**",
         success=success,
     )
+    '''
 
     log.info("═" * 50)
 
