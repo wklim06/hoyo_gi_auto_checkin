@@ -179,7 +179,7 @@ def run_checkin():
         log.info(f"msg : {message}")
         log.info(f"Reward claimed: {reward}")
     else:
-        log.error(f"❌ {message}")
+        log.error(f"error : {message}")
 
     log.info("═" * 50)
 
