@@ -25,6 +25,7 @@ SECURITY: Never share your cookie values with anyone.
 NOTE: Logging out of HoYoLAB will invalidate your cookies.
 """
 
+import os
 import requests
 import schedule
 import time
@@ -37,8 +38,8 @@ from datetime import datetime
 # ─────────────────────────────────────────────
 CONFIG = {
     # Your HoYoLAB cookie values (see instructions above)
-    "ltuid_v2":   "LTUID_V2_ALT",
-    "ltoken_v2":  "LTOKEN_V2_ALT",
+    "ltuid_v2":   os.environ["LTUID_V2_ALT"],
+    "ltoken_v2":  os.environ["LTOKEN_V2_ALT"],
     # Schedule time in HH:MM format (server resets at 00:00 UTC+8 / 16:00 UTC)
     # Default: 16:05 UTC (5 min after reset) — adjust for your timezone
     "checkin_time": "22:00",
