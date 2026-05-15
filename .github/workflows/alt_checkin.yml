@@ -27,6 +27,6 @@ jobs:
 
       - name: Run check-in
         env:
-          LTUID_V2_ALT:         ${{ secrets.LTUID_V2_ALT }}
-          LTOKEN_V2_ALT:        ${{ secrets.LTOKEN_V2_ALT }}
-        run: python alt_hoyolab_checkin.py --once
+          LTUID_V2:         ${{ secrets.LTUID_V2_ALT }}
+          LTOKEN_V2:        ${{ secrets.LTOKEN_V2_ALT }}
+        run: python hoyolab_checkin.py --once
