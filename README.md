@@ -12,16 +12,23 @@ This is a script to automate the HoyoLAB check-in for Genshin Impact.
 
 1. Copy "hoyolab_genshin.py", ".gitignore" and ".github/workflows/hoyolab_checkin.yml" to your repo, then commit it. Make it to be private if you want.
 2. Go to Actions tab to make sure there is workflow named HoYoLAB Genshin Daily Check-In
-![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/5dc473ab63130fa43d8f6457e2554674ab4c8b96/images/1.png)
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/2.png)
 3. Go to settings tab -> Secrets and variables -> Actions -> New repository secret.
-4. Now, go to your HoYoLAB profile page -> right click menu -> inspect -> Network -> refresh the page.
-5. Enter "getgame" at the filter and go to "Headers".
-6. Find the "ltuid_v2" and "ltoken_v2" at "Request Headers -> Cookies", don't close the tab yet.
-7. Copy the value of ltuid_v2, go back to Actions tab with New repo secret opened, set the secret name to LTUID_V2 and set the value you just copied.
-8. Do the same for the ltoken_v2, make sure the secret name is in capital.
-9. To check if the script work, go back to Actions tab and follow the picture.
-10. After it done, click into checkin. Ignore the warning message.
-11. Go to "Run check-in" to check if it works.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/3.png)
+5. Now, go to your HoYoLAB profile page -> right click menu -> inspect -> Network -> refresh the page.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/5.png)
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/6.png)
+7. Enter "getgame" at the filter and go to "Headers".
+8. ![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/7.png)
+9. Find the "ltuid_v2" and "ltoken_v2" at "Request Headers -> Cookies", don't close the tab yet.
+10. Copy the value of ltuid_v2, go back to Actions tab with New repo secret opened, set the secret name to LTUID_V2 and set the value you just copied.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/4.png)
+11. Do the same for the ltoken_v2, make sure the secret name is in capital.
+12. To check if the script work, go back to Actions tab and follow the picture.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/8.png)
+14. After it done, click into checkin. Ignore the warning message.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/9.png)
+16. Go to "Run check-in" to check if it works.
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/50d9a27a1f730d5957269709aa3668521a902de9/images/10.png)
 
-:D
-![image.alt]()
+Enjoy! :D
