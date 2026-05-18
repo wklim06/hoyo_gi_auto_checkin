@@ -10,5 +10,17 @@ This is a script to automate the HoyoLAB check-in for Genshin Impact.
 
 ## How To Use
 
+1. Copy "hoyolab_genshin.py", ".gitignore" and ".github/workflows/hoyolab_checkin.yml" to your repo, then commit it. Make it to be private if you want.
+2. Go to Actions tab to make sure there is workflow named HoYoLAB Genshin Daily Check-In
+![image.alt](image url)
+3. Go to settings tab -> Secrets and variables -> Actions -> New repository secret.
+4. Now, go to your HoYoLAB profile page -> right click menu -> inspect -> Network -> refresh the page.
+5. Enter "getgame" at the filter and go to "Headers".
+6. Find the "ltuid_v2" and "ltoken_v2" at "Request Headers -> Cookies", don't close the tab yet.
+7. Copy the value of ltuid_v2, go back to Actions tab with New repo secret opened, set the secret name to LTUID_V2 and set the value you just copied.
+8. Do the same for the ltoken_v2, make sure the secret name is in capital.
+9. To check if the script work, go back to Actions tab and follow the picture.
+10. After it done, click into checkin. Ignore the warning message.
+11. Go to "Run check-in" to check if it works.
 
 :D
