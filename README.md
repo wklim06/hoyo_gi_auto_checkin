@@ -12,7 +12,7 @@ This is a script to automate the HoyoLAB check-in for Genshin Impact.
 
 1. Copy "hoyolab_genshin.py", ".gitignore" and ".github/workflows/hoyolab_checkin.yml" to your repo, then commit it. Make it to be private if you want.
 2. Go to Actions tab to make sure there is workflow named HoYoLAB Genshin Daily Check-In
-![image.alt](image url)
+![image.alt](https://github.com/wklim06/hoyo_gi_auto_checkin/blob/5dc473ab63130fa43d8f6457e2554674ab4c8b96/images/1.png)
 3. Go to settings tab -> Secrets and variables -> Actions -> New repository secret.
 4. Now, go to your HoYoLAB profile page -> right click menu -> inspect -> Network -> refresh the page.
 5. Enter "getgame" at the filter and go to "Headers".
@@ -24,3 +24,4 @@ This is a script to automate the HoyoLAB check-in for Genshin Impact.
 11. Go to "Run check-in" to check if it works.
 
 :D
+![image.alt]()
